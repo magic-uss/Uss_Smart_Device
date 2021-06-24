@@ -142,6 +142,7 @@
                 <input class="feedback__input-text  form__input-text" type="tel" name="tel" id="telephone" placeholder="Телефон" required>
               </div>
               <div class="feedback__textarea-wrapper">
+                <label class="visually-hidden" for="question">Ваш вопрос:</label>
                 <textarea class="feedback__textarea  form__textarea" name="question" id="question" placeholder="Ваш вопрос"></textarea>
               </div>
               <button class="feedback__button  form__button" type="submit">Задать вопрос</button>
@@ -249,15 +250,15 @@
         <h2>Закажите звонок</h2>
         <p>Оставьте контакты, мы проконсультируем<br>вас бесплатно в удобное время</p>
         <form class="feedback-modal__form  form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="name">Ваше имя:</label>
-          <input class="feedback-modal__input-text  form__input-text" type="text" name="name" id="name" placeholder="Имя" required>
-          <label class="visually-hidden" for="telephone">Ваш телефон:</label>
-          <input class="feedback-modal__input-text  form__input-text" type="tel" name="tel" id="telephone" placeholder="Телефон" required>
-          <label class="visually-hidden" for="question">Ваш вопрос:</label>
-          <textarea class="feedback-modal__textarea  form__textarea" name="question" id="question" placeholder="Ваш вопрос"></textarea>
+          <label class="visually-hidden" for="name-modal">Ваше имя:</label>
+          <input class="feedback-modal__input-text  form__input-text" type="text" name="name" id="name-modal" placeholder="Имя" required>
+          <label class="visually-hidden" for="telephone-modal">Ваш телефон:</label>
+          <input class="feedback-modal__input-text  form__input-text" type="tel" name="tel" id="telephone-modal" placeholder="Телефон" required>
+          <label class="visually-hidden" for="question-modal">Ваш вопрос:</label>
+          <textarea class="feedback-modal__textarea  form__textarea" name="question" id="question-modal" placeholder="Ваш вопрос"></textarea>
           <button class="feedback-modal__button  form__button" type="submit">Отправить</button>
-          <input class="feedback-modal__input-checkbox  form__input-checkbox visually-hidden" type="checkbox" name="agreement" id="agreement" value="agree" required checked>
-          <label class="feedback-modal__label-checkbox  form__label-checkbox" for="agreement">Я согласен на обработку  персональных данных</label>
+          <input class="feedback-modal__input-checkbox  form__input-checkbox visually-hidden" type="checkbox" name="agreement" id="agreement-modal" value="agree" required checked>
+          <label class="feedback-modal__label-checkbox  form__label-checkbox" for="agreement-modal">Я согласен на обработку  персональных данных</label>
         </form>
         <button class="feedback-modal__close-button" type="button" aria-label="Закрыть"></button>
       </div>

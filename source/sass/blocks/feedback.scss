@@ -155,7 +155,7 @@
   left: 50%;
 }
 
-.feedback-__input-checkbox:checked + .feedback__label-checkbox::after {
+.feedback__input-checkbox:checked + .feedback__label-checkbox::after {
   content: "";
   position: absolute;
   top: 15px;

@@ -8,8 +8,8 @@
   var storageQuestion = '';
 
   forms.forEach((function (form) {
-    var nameInput = form.querySelector('.form__input-text[id="name"]');
-    var telephoneInput = form.querySelector('.form__input-text[id="telephone"]');
+    var nameInput = form.querySelector('.form__input-text[name="name"]');
+    var telephoneInput = form.querySelector('.form__input-text[name="tel"]');
     var questionInput = form.querySelector('.form__textarea');
     var formButton = form.querySelector('.form__button');
 

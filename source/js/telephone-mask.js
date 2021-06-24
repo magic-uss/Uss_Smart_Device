@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var telephoneInputs = document.querySelectorAll('.form__input-text[id="telephone"]');
+  var telephoneInputs = document.querySelectorAll('.form__input-text[name="tel"]');
 
   if (telephoneInputs) {
     telephoneInputs.forEach(function (telephoneInput) {
