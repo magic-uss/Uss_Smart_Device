@@ -54,10 +54,9 @@
           }
         }
 
-        var input = document.querySelector('#telephone');
-        input.addEventListener('input', mask, false);
-        input.addEventListener('focus', mask, false);
-        input.addEventListener('blur', mask, false);
+        telephoneInput.addEventListener('input', mask, false);
+        telephoneInput.addEventListener('focus', mask, false);
+        telephoneInput.addEventListener('blur', mask, false);
       });
     });
   }
