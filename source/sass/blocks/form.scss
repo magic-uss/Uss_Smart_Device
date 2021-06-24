@@ -1,0 +1,117 @@
+.form {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form__input-text {
+  color: $white;
+  background-color: transparentize($white, 0.9);
+  border: none;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.form__textarea {
+  color: $white;
+  background: transparentize($white, 0.9);
+  border: none;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.form__button {
+  padding: 14px 19px;
+  font-family: $roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    color: $blue;
+    background-color: $white;
+  }
+
+  &:active,
+  &:focus {
+    color: $blue;
+    background-color: $white;
+    opacity: 0.6;
+  }
+
+  @media (max-width: $tablet) {
+    width: 280px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 290px;
+    margin: 0 auto 22px;
+  }
+}
+
+.form__label-checkbox {
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  opacity: 0.8;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+    cursor: pointer;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $dark-blue;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: $dark-blue;
+      opacity: 0.6;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+.form__input-checkbox:focus + .form__label-checkbox::before {
+  border-color: $dark-blue;
+  opacity: 0.6;
+}
+
+.form__input-checkbox:disabled + .form__label-checkbox,
+.form__input-checkbox:disabled + .form__label-checkbox::before {
+  opacity: 0.5;
+}

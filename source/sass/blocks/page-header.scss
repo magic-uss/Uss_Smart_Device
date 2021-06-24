@@ -1,0 +1,144 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  min-height: 118px;
+
+  @media (max-width: $tablet) {
+    min-height: 92px;
+  }
+
+  @media (max-width: $mobile) {
+    min-height: 80px;
+  }
+}
+
+.page-header__inner {
+  max-width: 1466px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 33px 28px 30px 25px;
+
+  @media (max-width: $tablet) {
+    padding: 20px 24px 20px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 16px 14px 16px 17px;
+  }
+}
+
+.page-header__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.page-header__logo-link {
+  display: block;
+  margin-right: auto;
+}
+
+.page-header__logo-image {
+  width: 202px;
+  height: 52px;
+
+  @media (max-width: $mobile) {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.page-header__contacts-link {
+  display: block;
+  margin: 10px 50px 16px 37px;
+  line-height: 18px;
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:focus,
+  &:active {
+    color: $blue;
+    opacity: 0.6;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 4px 0 10px 25px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 3px 0 7px 15px;
+  }
+}
+
+.page-header__contacts-link:hover .page-header__contacts-icon {
+  color: $white;
+}
+
+.page-header__contacts-link:focus .page-header__contacts-icon,
+.page-header__contacts-link:active .page-header__contacts-icon {
+  color: $white;
+  opacity: 0.6;
+}
+
+.page-header__feedback-link {
+  display: block;
+  margin-bottom: 5px;
+  padding: 13px 26px 14px;
+  font-family: $roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 5px;
+
+  &:hover {
+    color: $blue;
+    background-color: $white;
+  }
+
+  &:focus,
+  &:active {
+    color: $blue;
+    background-color: $white;
+    opacity: 0.6;
+  }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.page-header__contacts-icon {
+  margin: 0 9px 0 0;
+  color: $blue;
+
+  @media (max-width: $tablet) {
+    &--mail {
+      width: 25px;
+      height: 19px;
+    }
+
+    &--phone {
+      width: 24px;
+      height: 24px;
+      margin: 0;
+    }
+  }
+}
+
+.page-header__contacts-link span {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}

@@ -1,0 +1,24 @@
+// globals
+
+@import "globals/normalize.scss";
+@import "globals/fonts.scss";
+@import "globals/variables.scss";
+@import "globals/global.scss";
+
+// blocks
+
+@import "blocks/visually-hidden.scss";
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/logo-socials.scss";
+@import "blocks/footer-menu.scss";
+@import "blocks/footer-contacts.scss";
+@import "blocks/footer-section.scss";
+@import "blocks/about.scss";
+@import "blocks/advantages.scss";
+@import "blocks/company.scss";
+@import "blocks/products.scss";
+@import "blocks/feedback.scss";
+@import "blocks/form.scss";
+@import "blocks/feedback-modal.scss";

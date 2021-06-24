@@ -1,0 +1,85 @@
+.logo-socials {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid transparentize($grey, 0.8);
+  }
+
+  @media (max-width: $mobile) {
+    min-height: 215px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.logo-socials__logo-link {
+  display: block;
+  width: 216px;
+  height: 52px;
+  margin-bottom: 53px;
+
+  @media (max-width: $tablet) {
+    margin: 0 30px 0 0;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 10px;
+  }
+}
+
+.logo-socials__wrapper {
+  display: flex;
+
+  @media (max-width: $tablet) {
+    margin-left: 15px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 15px 0 0;
+  }
+}
+
+.logo-socials__social-link {
+  display: block;
+  width: 27px;
+  height: 27px;
+  text-decoration: none;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.logo-socials p {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+    margin: 0;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $dark;
+    opacity: 0.5;
+  }
+}
+
+.logo-socials__social-icon {
+  color: $middle-grey;
+}
+
+.logo-socials__social-link:hover .logo-socials__social-icon {
+  color: $blue;
+}
+
+.logo-socials__social-link:focus .logo-socials__social-icon,
+.logo-socials__social-link:active .logo-socials__social-icon {
+  color: $blue;
+  opacity: 0.6;
+}

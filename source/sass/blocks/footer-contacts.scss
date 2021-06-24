@@ -1,0 +1,41 @@
+.footer-contacts h2 {
+  margin: 0 0 25px 2px;
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $dark;
+
+  @media (max-width: $mobile) {
+    margin: 0 0 27px;
+  }
+}
+
+.footer-contacts p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 25px;
+  color: $dark;
+  opacity: 0.5;
+}
+
+.footer-contacts__phone-link {
+  display: block;
+  font-size: 15px;
+  line-height: 25px;
+  color: $dark;
+  opacity: 0.5;
+  text-decoration: none;
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:focus,
+  &:active {
+    color: $blue;
+    opacity: 0.3;
+  }
+}

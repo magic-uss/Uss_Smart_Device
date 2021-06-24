@@ -1,0 +1,213 @@
+.products {
+  background-color: $dark-blue;
+}
+
+.products__inner {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 88px 25px 97px;
+
+  @media (max-width: $tablet) {
+    padding: 50px 22px 32px 26px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 50px 15px 34px;
+  }
+}
+
+.products__inner h2 {
+  margin: 0 0 52px;
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 49px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 42px 10px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.products__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.products__item {
+  width: 370px;
+  height: 620px;
+  margin-bottom: 30px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &:nth-child(1) {
+    background: url("../img/services-production-desktop.png") 0 0 / cover no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/services-production-desktop@2x.png");
+      background-size: 370px 620px;
+    }
+  }
+
+  &:nth-child(2) {
+    background: url("../img/services-installation-desktop.png") 0 0 / cover no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/services-installation-desktop@2x.png");
+      background-size: 370px 620px;
+    }
+  }
+
+  &:nth-child(3) {
+    background: url("../img/services-accessories-desktop.png") 0 0 / cover no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/services-accessories-desktop@2x.png");
+      background-size: 370px 620px;
+    }
+  }
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+
+  @media (max-width: $tablet) {
+    width: 720px;
+    height: 256px;
+    margin-bottom: 46px;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &:nth-child(1) {
+      background: url("../img/services-production-tablet.png") 0 0 / cover no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/services-production-tablet@2x.png");
+        background-size: 720px 256px;
+      }
+    }
+
+    &:nth-child(2) {
+      background: url("../img/services-installation-tablet.png") 0 0 / cover no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/services-installation-tablet@2x.png");
+        background-size: 720px 256px;
+      }
+    }
+
+    &:nth-child(3) {
+      background: url("../img/services-accessories-tablet.png") 0 0 / cover no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/services-accessories-tablet@2x.png");
+        background-size: 720px 256px;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    width: 290px;
+    height: 256px;
+    margin-bottom: 30px;
+
+    &:nth-child(1) {
+      background: url("../img/services-production-mobile.png") 0 0 / cover no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/services-production-mobile@2x.png");
+        background-size: 290px 256px;
+      }
+    }
+
+    &:nth-child(2) {
+      background: url("../img/services-installation-mobile.png") 0 0 / cover no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/services-installation-mobile@2x.png");
+        background-size: 290px 256px;
+      }
+    }
+
+    &:nth-child(3) {
+      background: url("../img/services-accessories-mobile.png") 0 0 / cover no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/services-accessories-mobile@2x.png");
+        background-size: 290px 256px;
+      }
+    }
+  }
+}
+
+.products__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 50px 44px;
+  color: $white;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 63px;
+    height: 63px;
+    background: $blue url("../img/services-arrow-icon.svg") 31px 27px no-repeat;
+  }
+
+  &:hover {
+    color: $blue;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 40px 44px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 20px 35px;
+  }
+}
+
+.products__item h3 {
+  width: 55%;
+  margin: 0;
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: inherit;
+
+  @media (max-width: $tablet) {
+    width: 25%;
+  }
+
+  @media (max-width: $mobile) {
+    width: 70%;
+  }
+}

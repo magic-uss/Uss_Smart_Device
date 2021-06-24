@@ -1,0 +1,171 @@
+.feedback {
+  min-height: 671px;
+  background: $blue url("../img/feedback-bg-desktop.svg") right 35px no-repeat;
+
+  @media (max-width: $tablet) {
+    min-height: 664px;
+    background-image: none;
+  }
+
+  @media (max-width: $mobile) {
+    min-height: 640px;
+  }
+}
+
+.feedback__inner {
+  max-width: 1566px;
+  margin: 0 auto;
+  padding: 91px 25px 97px 41.5%;
+  background: url("../img/feedback-image-desktop.png") left -60px no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/feedback-image-desktop@2x.png");
+    background-size: 686px 637px;
+  }
+
+  @media (max-width: $tablet) {
+    max-width: 641px;
+    padding: 80px 25px 97px;
+    background: none;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 100%;
+    padding: 30px 15px 33px;
+  }
+}
+
+.feedback__inner h2 {
+  margin: 0 0 10px;
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 16px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 13px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.feedback__inner p {
+  margin: 0 0 51px 3px;
+  color: $white;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 54px 3px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 27px;
+  }
+}
+
+.feedback__form-wrapper {
+  max-width: 570px;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.feedback__input-text-wrapper {
+  width: 47.5%;
+  margin-bottom: 41px;
+  background-color: $blue;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 44px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    margin-bottom: 33px;
+  }
+}
+
+.feedback__textarea-wrapper {
+  width: 100%;
+  min-height: 155px;
+  margin-bottom: 36px;
+  background-color: $blue;
+
+  @media (max-width: $tablet) {
+    min-height: 158px;
+    margin-bottom: 41px;
+  }
+
+  @media (max-width: $mobile) {
+    min-height: 103px;
+    margin-bottom: 24px;
+  }
+}
+
+.feedback__input-text {
+  width: 100%;
+  padding: 14px 19px 17px;
+}
+
+.feedback__textarea {
+  width: 100%;
+  min-height: 155px;
+  padding: 14px 19px 15px;
+
+  @media (max-width: $tablet) {
+    min-height: 158px;
+    padding: 14px 19px 19px;
+  }
+
+  @media (max-width: $mobile) {
+    min-height: 103px;
+  }
+}
+
+.feedback__button {
+  width: 270px;
+  margin-left: 3px;
+}
+
+.feedback__label-checkbox {
+  width: 45.5%;
+  padding: 9px 5px 9px 30px;
+
+  @media (max-width: $tablet) {
+    padding: 9px 5px 9px 33px;
+  }
+
+  @media (max-width: $mobile) {
+    width: auto;
+    margin: 0 auto;
+    padding: 9px 5px 9px 34px;
+  }
+}
+
+.feedback__input-checkbox {
+  bottom: 0;
+  left: 50%;
+}
+
+.feedback-__input-checkbox:checked + .feedback__label-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 4px;
+  width: 9px;
+  height: 6px;
+  background: url("../img/checkbox-icon.svg") 0 0 no-repeat;
+  cursor: pointer;
+
+  @media (max-width: $mobile) {
+    left: 4px;
+  }
+}

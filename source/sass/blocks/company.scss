@@ -1,0 +1,128 @@
+.company {
+  max-width: 1220px;
+  min-height: 472px;
+  margin: 0 auto;
+  padding: 54px 25px 50px 205px;
+  background: url("../img/company-image-desktop.png") -5px 59px no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/company-image-desktop@2x.png");
+    background-size: 220px 317px;
+  }
+
+  @media (max-width: $tablet) {
+    min-height: 467px;
+    padding: 32px 25px 50px 210px;
+    background: url("../img/company-image-tablet.png") 0 30px no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/company-image-tablet@2x.png");
+      background-size: 244px 362px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    min-height: 403px;
+    padding: 32px 14px 65px;
+    background: none;
+  }
+}
+
+.company h2 {
+  margin: 0 0 20px;
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $darkest-grey;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 24px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 20px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.company p {
+  margin: 0 0 21px;
+  color: $darkest-grey;
+
+  @media (max-width: $tablet) {
+    margin-left: 3px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 39px 3px;
+  }
+}
+
+.company p br {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.company__more {
+  display: inline;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.company__points {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: inline;
+  }
+}
+
+.company__button {
+  display: inline-block;
+  margin-top: 19px;
+  padding: 14px 49px;
+  font-family: $roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $blue;
+  text-decoration: none;
+  border: 1px solid $blue;
+  border-radius: 5px;
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+  }
+
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: $blue;
+    opacity: 0.3;
+  }
+
+  @media (max-width: $tablet) {
+    margin-left: 3px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-top: -10px;
+  }
+}

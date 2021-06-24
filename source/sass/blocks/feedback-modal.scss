@@ -1,0 +1,110 @@
+.feedback-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: fade-out($dark, 0.4);
+}
+
+.feedback-modal--show {
+  display: flex;
+}
+
+.feedback-modal__form-wrapper {
+  position: relative;
+  width: 490px;
+  padding: 30px 40px 28px;
+  background-color: $blue;
+}
+
+.feedback-modal__form-wrapper h2 {
+  margin: 0 0 13px;
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+  color: $white;
+}
+
+.feedback-modal__form-wrapper p {
+  margin: 0 0 30px;
+  color: $white;
+}
+
+.feedback-modal__input-text {
+  width: 100%;
+  margin-bottom: 28px;
+  padding: 16px 24px 20px;
+}
+
+.feedback-modal__textarea {
+  width: 100%;
+  min-height: 107px;
+  margin-bottom: 28px;
+  padding: 15px 25px 18px;
+}
+
+.feedback-modal__button {
+  width: 100%;
+}
+
+.feedback-modal__label-checkbox {
+  width: 100%;
+  margin: 26px 0 0 0;
+  padding: 9px 15px 9px 48px;
+}
+
+.feedback-modal__close-button {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    background: url("../img/close-icon.svg") 0 0 no-repeat;
+  }
+
+  &:hover {
+    &::before {
+      background-image: url("../img/close-icon-hover.svg");
+    }
+  }
+
+  &:focus,
+  &:active {
+    &::before {
+      background-image: url("../img/close-icon-hover.svg");
+      opacity: 0.6;
+    }
+  }
+}
+
+.feedback-modal__input-checkbox:checked + .feedback-modal__label-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 4px;
+  width: 9px;
+  height: 6px;
+  background: url("../img/checkbox-icon.svg") 0 0 no-repeat;
+  cursor: pointer;
+
+  @media (max-width: $mobile) {
+    left: 4px;
+  }
+}
