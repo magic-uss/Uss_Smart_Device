@@ -11,7 +11,7 @@
   }
 }
 
-.form__input-text {
+.form input[type="text"] {
   color: $white;
   background-color: transparentize($white, 0.9);
   border: none;
@@ -21,9 +21,9 @@
   }
 }
 
-.form__textarea {
+.form input[type="tel"] {
   color: $white;
-  background: transparentize($white, 0.9);
+  background-color: transparentize($white, 0.9);
   border: none;
 
   &::placeholder {
@@ -31,7 +31,17 @@
   }
 }
 
-.form__button {
+.form textarea {
+  color: $white;
+  background-color: transparentize($white, 0.9);
+  border: none;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.form button {
   padding: 14px 19px;
   font-family: $roboto;
   font-weight: 700;
@@ -68,7 +78,8 @@
   }
 }
 
-.form__label-checkbox {
+.form label[for="agreement"],
+.form label[for="agreement-modal"] {
   position: relative;
   font-size: 14px;
   line-height: 16px;
@@ -106,12 +117,15 @@
   }
 }
 
-.form__input-checkbox:focus + .form__label-checkbox::before {
+.form input[type="checkbox"]:focus + label[for="agreement"]::before,
+.form input[type="checkbox"]:focus + label[for="agreement-modal"]::before {
   border-color: $dark-blue;
   opacity: 0.6;
 }
 
-.form__input-checkbox:disabled + .form__label-checkbox,
-.form__input-checkbox:disabled + .form__label-checkbox::before {
+.form input[type="checkbox"]:disabled + label[for="agreement"],
+.form input[type="checkbox"]:disabled + label[for="agreement"]::before,
+.form input[type="checkbox"]:disabled + label[for="agreement-modal"],
+.form input[type="checkbox"]:disabled + label[for="agreement-modal"]::before {
   opacity: 0.5;
 }

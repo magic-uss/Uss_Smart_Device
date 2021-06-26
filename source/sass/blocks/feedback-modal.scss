@@ -36,27 +36,39 @@
   color: $white;
 }
 
-.feedback-modal__input-text {
+.feedback-modal__form input[type="text"] {
   width: 100%;
   margin-bottom: 28px;
   padding: 16px 24px 20px;
 }
 
-.feedback-modal__textarea {
+.feedback-modal__form input[type="tel"] {
+  width: 100%;
+  margin-bottom: 28px;
+  padding: 16px 24px 20px;
+}
+
+.feedback-modal__form textarea {
   width: 100%;
   min-height: 107px;
   margin-bottom: 28px;
   padding: 15px 25px 18px;
 }
 
-.feedback-modal__button {
+.feedback-modal__form button {
   width: 100%;
 }
 
-.feedback-modal__label-checkbox {
+.feedback-modal__form label[for="agreement-modal"] {
   width: 100%;
   margin: 26px 0 0 0;
   padding: 9px 15px 9px 48px;
+  color: $white;
+}
+
+.feedback-modal__form input[type="checkbox"] {
+  bottom: 0;
+  left: 0;
 }
 
 .feedback-modal__close-button {
@@ -94,7 +106,7 @@
   }
 }
 
-.feedback-modal__input-checkbox:checked + .feedback-modal__label-checkbox::after {
+.feedback-modal__form input[type="checkbox"]:checked + label[for="agreement-modal"]::after {
   content: "";
   position: absolute;
   top: 15px;

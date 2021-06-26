@@ -8,10 +8,10 @@
   var storageQuestion = '';
 
   forms.forEach((function (form) {
-    var nameInput = form.querySelector('.form__input-text[name="name"]');
-    var telephoneInput = form.querySelector('.form__input-text[name="tel"]');
-    var questionInput = form.querySelector('.form__textarea');
-    var formButton = form.querySelector('.form__button');
+    var nameInput = form.querySelector('input[name="name"]');
+    var telephoneInput = form.querySelector('input[name="tel"]');
+    var questionInput = form.querySelector('textarea');
+    var formButton = form.querySelector('button');
 
     try {
       storageName = localStorage.getItem('name');

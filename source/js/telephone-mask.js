@@ -1,14 +1,12 @@
 'use strict';
 
 (function () {
-  var telephoneInputs = document.querySelectorAll('.form__input-text[name="tel"]');
+  var telephoneInputs = document.querySelectorAll('input[name="tel"]');
 
   if (telephoneInputs) {
     telephoneInputs.forEach(function (telephoneInput) {
       window.addEventListener('DOMContentLoaded', function () {
         function setCursorPosition(pos, elem) {
-          elem.focus();
-
           if (elem.setSelectionRange) {
             elem.setSelectionRange(pos, pos);
           } else if (elem.createTextRange) {

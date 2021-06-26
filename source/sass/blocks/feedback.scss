@@ -78,44 +78,58 @@
   }
 }
 
-.feedback__input-text-wrapper {
-  width: 47.5%;
-  margin-bottom: 41px;
-  background-color: $blue;
-
-  @media (max-width: $tablet) {
-    margin-bottom: 44px;
-  }
-
-  @media (max-width: $mobile) {
-    width: 100%;
-    margin-bottom: 33px;
-  }
-}
-
-.feedback__textarea-wrapper {
-  width: 100%;
-  min-height: 155px;
-  margin-bottom: 36px;
-  background-color: $blue;
-
-  @media (max-width: $tablet) {
-    min-height: 158px;
+.feedback__form div {
+  &:nth-child(1),
+  &:nth-child(2) {
+    width: 47.5%;
     margin-bottom: 41px;
+    background-color: $blue;
+  }
+
+  &:nth-child(3) {
+    width: 100%;
+    min-height: 155px;
+    margin-bottom: 36px;
+    background-color: $blue;
+  }
+
+  @media (max-width: $tablet) {
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 44px;
+    }
+
+    &:nth-child(3) {
+      min-height: 158px;
+      margin-bottom: 41px;
+    }
   }
 
   @media (max-width: $mobile) {
-    min-height: 103px;
-    margin-bottom: 24px;
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: 100%;
+      margin-bottom: 33px;
+    }
+
+    &:nth-child(3) {
+      min-height: 103px;
+      margin-bottom: 24px;
+    }
   }
 }
 
-.feedback__input-text {
+.feedback__form input[type="text"] {
   width: 100%;
   padding: 14px 19px 17px;
 }
 
-.feedback__textarea {
+.feedback__form input[type="tel"] {
+  width: 100%;
+  padding: 14px 19px 17px;
+}
+
+.feedback__form textarea {
   width: 100%;
   min-height: 155px;
   padding: 14px 19px 15px;
@@ -130,12 +144,12 @@
   }
 }
 
-.feedback__button {
+.feedback__form button {
   width: 270px;
   margin-left: 3px;
 }
 
-.feedback__label-checkbox {
+.feedback__form label[for="agreement"] {
   width: 45.5%;
   padding: 9px 5px 9px 30px;
 
@@ -150,12 +164,12 @@
   }
 }
 
-.feedback__input-checkbox {
+.feedback__form input[type="checkbox"] {
   bottom: 0;
-  left: 50%;
+  left: 55%;
 }
 
-.feedback__input-checkbox:checked + .feedback__label-checkbox::after {
+.feedback__form input[type="checkbox"]:checked + label[for="agreement"]::after {
   content: "";
   position: absolute;
   top: 15px;

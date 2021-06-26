@@ -4,7 +4,7 @@
   var modalPopup = document.querySelector('.feedback-modal');
   var callBackButton = document.querySelector('.page-header__feedback-link');
   var closeModalButton = document.querySelector('.feedback-modal__close-button');
-  var nameInput = document.querySelector('.feedback-modal__input-text[id="name-modal"]');
+  var nameInput = document.querySelector('input[id="name-modal"]');
 
   callBackButton.addEventListener('click', function (evt) {
     evt.preventDefault();
