@@ -3,24 +3,24 @@
   background: $dark-blue url("../img/main-bg-desktop.png") 0 0 / cover no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/main-bg-desktop@2x.png");
+    background: $dark-blue url("../img/main-bg-desktop@2x.png") 0 0 / cover no-repeat;
   }
 
   @media (max-width: $tablet) {
     min-height: 686px;
-    background-image: url("../img/main-bg-tablet.png");
+    background: $dark-blue url("../img/main-bg-tablet.png") 0 0 / cover no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/main-bg-tablet@2x.png");
+      background: $dark-blue url("../img/main-bg-tablet@2x.png") 0 0 / cover no-repeat;
     }
   }
 
   @media (max-width: $mobile) {
     min-height: 647px;
-    background-image: url("../img/main-bg-mobile.png");
+    background: $dark-blue url("../img/main-bg-mobile.png") 0 0 / cover no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/main-bg-mobile@2x.png");
+      background: $dark-blue url("../img/main-bg-mobile@2x.png") 0 0 / cover no-repeat;
     }
   }
 }
@@ -144,7 +144,7 @@
     height: 468px;
     margin: 0 0 0 -74px;
     padding-top: 112px;
-    background-image: url("../img/main-image-bg-tablet.svg");
+    background: url("../img/main-image-bg-tablet.svg") 0 50% / contain no-repeat;
   }
 
   @media (max-width: $mobile) {
@@ -152,7 +152,7 @@
     height: 449px;
     align-self: flex-end;
     padding-top: 92px;
-    background-image: url("../img/main-image-bg-mobile.svg");
+    background: url("../img/main-image-bg-mobile.svg") 0 50% / contain no-repeat;
   }
 }
 

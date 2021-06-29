@@ -133,7 +133,7 @@
                   <source media="(max-width: 1023px)" srcset="./img/services-production-tablet.png 1x, ./img/services-production-tablet@2x.png 2x">
                   <!-- 1х: 370px; 2x: 740px -->
                   <source type="image/webp" srcset="./img/services-production-desktop.webp 1x, ./img/services-production-desktop@2x.webp 2x">
-                  <img src="./img/services-production-desktop.png" width="370" height="620" alt="" srcset="./img/services-production-desktop@2x.png 2x">
+                  <img src="./img/services-production-desktop.png" width="370" height="620" alt="" srcset="./img/services-production-desktop@2x.png 2x" loading="lazy">
                 </picture>
               </a>
             </li>
@@ -149,7 +149,7 @@
                   <source media="(max-width: 1023px)" srcset="./img/services-installation-tablet.png 1x, ./img/services-installation-tablet@2x.png 2x">
                   <!-- 1х: 370px; 2x: 740px -->
                   <source type="image/webp" srcset="./img/services-installation-desktop.webp 1x, ./img/services-installation-desktop@2x.webp 2x">
-                  <img src="./img/services-installation-desktop.png" width="370" height="620" alt="" srcset="./img/services-installation-desktop@2x.png 2x">
+                  <img src="./img/services-installation-desktop.png" width="370" height="620" alt="" srcset="./img/services-installation-desktop@2x.png 2x" loading="lazy">
                 </picture>
               </a>
             </li>
@@ -165,7 +165,7 @@
                   <source media="(max-width: 1023px)" srcset="./img/services-accessories-tablet.png 1x, ./img/services-accessories-tablet@2x.png 2x">
                   <!-- 1х: 370px; 2x: 740px -->
                   <source type="image/webp" srcset="./img/services-accessories-desktop.webp 1x, ./img/services-accessories-desktop@2x.webp 2x">
-                  <img src="./img/services-accessories-desktop.png" width="370" height="620" alt="" srcset="./img/services-accessories-desktop@2x.png 2x">
+                  <img src="./img/services-accessories-desktop.png" width="370" height="620" alt="" srcset="./img/services-accessories-desktop@2x.png 2x" loading="lazy">
                 </picture>
               </a>
             </li>
@@ -192,8 +192,10 @@
                 <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
               </div>
               <button type="submit">Задать вопрос</button>
-              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" value="agree" required checked>
-              <label for="agreement">Я согласен на обработку  персональных данных</label>
+              <div>
+                <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" value="agree" required checked>
+                <label for="agreement">Я согласен на обработку  персональных данных</label>
+              </div>
             </form>
           </div>
         </div>

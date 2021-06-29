@@ -12,7 +12,7 @@
 }
 
 .form input[type="text"] {
-  color: $white;
+  color: $dark;
   background-color: transparentize($white, 0.9);
   border: none;
 
@@ -22,7 +22,7 @@
 }
 
 .form input[type="tel"] {
-  color: $white;
+  color: $dark;
   background-color: transparentize($white, 0.9);
   border: none;
 
@@ -32,9 +32,10 @@
 }
 
 .form textarea {
-  color: $white;
+  color: $dark;
   background-color: transparentize($white, 0.9);
   border: none;
+  resize: none;
 
   &::placeholder {
     color: $white;
@@ -89,7 +90,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 9px;
     left: 0;
     width: 16px;
     height: 16px;
@@ -107,6 +108,12 @@
     &::before {
       border-color: $dark-blue;
       opacity: 0.6;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &::before {
+      left: 4px;
     }
   }
 

@@ -6,8 +6,7 @@
   background: url("../img/company-image-desktop.png") -5px 59px no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/company-image-desktop@2x.png");
-    background-size: 220px 317px;
+    background: url("../img/company-image-desktop@2x.png") -5px 59px / 220px 317px no-repeat;
   }
 
   @media (max-width: $tablet) {
@@ -16,8 +15,7 @@
     background: url("../img/company-image-tablet.png") 0 30px no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/company-image-tablet@2x.png");
-      background-size: 244px 362px;
+      background: url("../img/company-image-tablet@2x.png") 0 30px / 244px 362px no-repeat;
     }
   }
 

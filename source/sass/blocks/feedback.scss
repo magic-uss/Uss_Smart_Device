@@ -4,7 +4,7 @@
 
   @media (max-width: $tablet) {
     min-height: 664px;
-    background-image: none;
+    background: $blue none right 35px no-repeat;
   }
 
   @media (max-width: $mobile) {
@@ -19,8 +19,7 @@
   background: url("../img/feedback-image-desktop.png") left -60px no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/feedback-image-desktop@2x.png");
-    background-size: 686px 637px;
+    background: url("../img/feedback-image-desktop@2x.png") left -60px / 686px 637px no-repeat;
   }
 
   @media (max-width: $tablet) {
@@ -93,6 +92,12 @@
     background-color: $blue;
   }
 
+  &:last-child {
+    position: relative;
+    width: 46%;
+    line-height: 16px;
+  }
+
   @media (max-width: $tablet) {
     &:nth-child(1),
     &:nth-child(2) {
@@ -115,6 +120,11 @@
     &:nth-child(3) {
       min-height: 103px;
       margin-bottom: 24px;
+    }
+
+    &:last-child {
+      width: auto;
+      margin: 0 auto;
     }
   }
 }
@@ -150,34 +160,40 @@
 }
 
 .feedback__form label[for="agreement"] {
-  width: 45.5%;
-  padding: 9px 5px 9px 30px;
+  display: block;
+  padding: 8px 5px 8px 33px;
 
   @media (max-width: $tablet) {
-    padding: 9px 5px 9px 33px;
+    padding: 9px 5px 9px 38px;
   }
 
   @media (max-width: $mobile) {
-    width: auto;
-    margin: 0 auto;
     padding: 9px 5px 9px 34px;
   }
 }
 
 .feedback__form input[type="checkbox"] {
   bottom: 0;
-  left: 55%;
+  left: 8px;
+
+  @media (max-width: $tablet) {
+    left: 12px;
+  }
 }
 
 .feedback__form input[type="checkbox"]:checked + label[for="agreement"]::after {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 14px;
   left: 4px;
   width: 9px;
   height: 6px;
   background: url("../img/checkbox-icon.svg") 0 0 no-repeat;
   cursor: pointer;
+
+  @media (max-width: $tablet) {
+    left: 8px;
+  }
 
   @media (max-width: $mobile) {
     left: 4px;
