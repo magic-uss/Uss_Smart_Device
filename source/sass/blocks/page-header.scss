@@ -31,13 +31,16 @@
 
 .page-header__contacts {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 .page-header__logo-link {
   display: block;
+  min-width: 202px;
   margin-right: auto;
+
+  @media (max-width: $mobile) {
+    min-width: 38px;
+  }
 }
 
 .page-header__logo-image {
@@ -47,6 +50,21 @@
   @media (max-width: $mobile) {
     width: 38px;
     height: 38px;
+  }
+}
+
+.page-header__contacts-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 5px 0 0;
+
+  @media (max-width: $tablet) {
+    padding: 10px 0 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 5px 0 0;
   }
 }
 
@@ -88,8 +106,10 @@
 
 .page-header__feedback-link {
   display: block;
-  margin-bottom: 5px;
-  padding: 13px 26px 14px;
+  align-self: flex-start;
+  min-width: 180px;
+  margin: 5px 0;
+  padding: 13px 26px 12px;
   font-family: $roboto;
   font-weight: 700;
   font-size: 14px;

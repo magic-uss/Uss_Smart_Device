@@ -1,5 +1,5 @@
 .feedback {
-  min-height: 671px;
+  min-height: 670px;
   background: $blue url("../img/feedback-bg-desktop.svg") right 35px no-repeat;
 
   @media (max-width: $tablet) {
@@ -13,23 +13,23 @@
 }
 
 .feedback__inner {
+  display: flex;
   max-width: 1566px;
+  height: 100%;
+  min-height: 670px;
   margin: 0 auto;
-  padding: 91px 25px 97px 41.5%;
-  background: url("../img/feedback-image-desktop.png") left -60px no-repeat;
-
-  @media (min-resolution: 2dppx) {
-    background: url("../img/feedback-image-desktop@2x.png") left -60px / 686px 637px no-repeat;
-  }
+  padding: 0 25px 89px 0;
 
   @media (max-width: $tablet) {
     max-width: 641px;
-    padding: 80px 25px 97px;
+    min-height: 664px;
+    padding: 80px 25px 89px;
     background: none;
   }
 
   @media (max-width: $mobile) {
     max-width: 100%;
+    min-height: 640px;
     padding: 30px 15px 33px;
   }
 }
@@ -68,12 +68,30 @@
   }
 }
 
+.feedback__image-wrapper {
+  width: 44.5%;
+  min-height: 641px;
+  margin: -60px 7.2% 0 0;
+  background: url("../img/feedback-image-desktop.png") 0 center / contain no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/feedback-image-desktop@2x.png") left -60px / 686px 637px no-repeat;
+  }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
 .feedback__form-wrapper {
+  position: relative;
   max-width: 570px;
+  padding: 91px 0 0;
 
   @media (max-width: $tablet) {
     width: 100%;
     max-width: 100%;
+    padding: 0;
   }
 }
 
@@ -181,21 +199,34 @@
   }
 }
 
-.feedback__form input[type="checkbox"]:checked + label[for="agreement"]::after {
-  content: "";
-  position: absolute;
-  top: 14px;
-  left: 4px;
-  width: 9px;
-  height: 6px;
-  background: url("../img/checkbox-icon.svg") 0 0 no-repeat;
-  cursor: pointer;
+.feedback__form input[type="checkbox"]:checked + label[for="agreement"] {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 4px;
+    width: 9px;
+    height: 6px;
+    background: url("../img/checkbox-icon.svg") 0 0 no-repeat;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active {
+    &::after {
+      background: url("../img/checkbox-hover-icon.svg") 0 0 no-repeat;
+    }
+  }
 
   @media (max-width: $tablet) {
-    left: 8px;
+    &::after {
+      left: 8px;
+    }
   }
 
   @media (max-width: $mobile) {
-    left: 4px;
+    &::after {
+      left: 4px;
+    }
   }
 }

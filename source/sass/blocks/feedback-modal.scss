@@ -73,10 +73,10 @@
 
 .feedback-modal__close-button {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 17px;
-  height: 17px;
+  top: 11px;
+  right: 11px;
+  width: 35px;
+  height: 35px;
   background-color: transparent;
   border: 0;
   cursor: pointer;
@@ -84,8 +84,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 9px;
+    right: 9px;
     width: 17px;
     height: 17px;
     background: url("../img/close-icon.svg") 0 0 no-repeat;
@@ -106,17 +106,28 @@
   }
 }
 
-.feedback-modal__form input[type="checkbox"]:checked + label[for="agreement-modal"]::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 4px;
-  width: 9px;
-  height: 6px;
-  background: url("../img/checkbox-icon.svg") 0 0 no-repeat;
-  cursor: pointer;
+.feedback-modal__form input[type="checkbox"]:checked + label[for="agreement-modal"] {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 4px;
+    width: 9px;
+    height: 6px;
+    background: url("../img/checkbox-icon.svg") 0 0 no-repeat;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active {
+    &::after {
+      background: url("../img/checkbox-hover-icon.svg") 0 0 no-repeat;
+    }
+  }
 
   @media (max-width: $mobile) {
-    left: 4px;
+    &::after {
+      left: 4px;
+    }
   }
 }
