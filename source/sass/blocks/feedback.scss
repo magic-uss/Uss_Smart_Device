@@ -75,7 +75,7 @@
   background: url("../img/feedback-image-desktop.png") 0 center / contain no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background: url("../img/feedback-image-desktop@2x.png") left -60px / 686px 637px no-repeat;
+    background: url("../img/feedback-image-desktop@2x.png") 0 center / contain no-repeat;
   }
 
   @media (max-width: $tablet) {
@@ -110,8 +110,9 @@
     background-color: $blue;
   }
 
-  &:last-child {
+  &:nth-child(4) {
     position: relative;
+    order: 50;
     width: 46%;
     line-height: 16px;
   }
@@ -140,7 +141,8 @@
       margin-bottom: 24px;
     }
 
-    &:last-child {
+    &:nth-child(4) {
+      order: 50;
       width: auto;
       margin: 0 auto;
     }

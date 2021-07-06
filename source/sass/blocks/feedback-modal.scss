@@ -60,6 +60,7 @@
 }
 
 .feedback-modal__form label[for="agreement-modal"] {
+  order: 50;
   width: 100%;
   margin: 26px 0 0 0;
   padding: 9px 15px 9px 48px;

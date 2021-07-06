@@ -1546,7 +1546,7 @@ img {
   background: url("../img/feedback-image-desktop.png") 0 center/contain no-repeat; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .feedback__image-wrapper {
-      background: url("../img/feedback-image-desktop@2x.png") left -60px/686px 637px no-repeat; } }
+      background: url("../img/feedback-image-desktop@2x.png") 0 center/contain no-repeat; } }
   @media (max-width: 1023px) {
     .feedback__image-wrapper {
       display: none; } }
@@ -1572,8 +1572,11 @@ img {
   margin-bottom: 36px;
   background-color: #00b2ff; }
 
-.feedback__form div:last-child {
+.feedback__form div:nth-child(4) {
   position: relative;
+  -webkit-box-ordinal-group: 51;
+      -ms-flex-order: 50;
+          order: 50;
   width: 46%;
   line-height: 16px; }
 
@@ -1591,7 +1594,10 @@ img {
   .feedback__form div:nth-child(3) {
     min-height: 103px;
     margin-bottom: 24px; }
-  .feedback__form div:last-child {
+  .feedback__form div:nth-child(4) {
+    -webkit-box-ordinal-group: 51;
+        -ms-flex-order: 50;
+            order: 50;
     width: auto;
     margin: 0 auto; } }
 
@@ -1683,7 +1689,8 @@ img {
 .form input[type="text"] {
   color: #1b2d37;
   background-color: rgba(255, 255, 255, 0.1);
-  border: none; }
+  border: none;
+  border-radius: 0; }
   .form input[type="text"]::-webkit-input-placeholder {
     color: #ffffff; }
   .form input[type="text"]::-moz-placeholder {
@@ -1698,7 +1705,8 @@ img {
 .form input[type="tel"] {
   color: #1b2d37;
   background-color: rgba(255, 255, 255, 0.1);
-  border: none; }
+  border: none;
+  border-radius: 0; }
   .form input[type="tel"]::-webkit-input-placeholder {
     color: #ffffff; }
   .form input[type="tel"]::-moz-placeholder {
@@ -1714,6 +1722,7 @@ img {
   color: #1b2d37;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
+  border-radius: 0;
   resize: none; }
   .form textarea::-webkit-input-placeholder {
     color: #ffffff; }
@@ -1862,6 +1871,9 @@ img {
   width: 100%; }
 
 .feedback-modal__form label[for="agreement-modal"] {
+  -webkit-box-ordinal-group: 51;
+      -ms-flex-order: 50;
+          order: 50;
   width: 100%;
   margin: 26px 0 0 0;
   padding: 9px 15px 9px 48px;
