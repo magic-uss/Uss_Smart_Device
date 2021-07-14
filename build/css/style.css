@@ -1823,21 +1823,31 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: rgba(27, 45, 55, 0.6); }
+  background-color: rgba(27, 45, 55, 0.6);
+  overflow: auto; }
 
 .feedback-modal--show {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.feedback-modal--show-overflow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .feedback-modal__form-wrapper {
   position: relative;
   width: 490px;
   padding: 30px 40px 28px;
-  background-color: #00b2ff; }
+  background-color: #00b2ff;
+  overflow: visible; }
 
 .feedback-modal__form-wrapper h2 {
   margin: 0 0 13px;

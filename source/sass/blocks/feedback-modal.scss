@@ -7,12 +7,18 @@
   z-index: 20;
   display: none;
   justify-content: center;
-  align-items: center;
   background-color: fade-out($dark, 0.4);
+  overflow: auto;
 }
 
 .feedback-modal--show {
   display: flex;
+  align-items: center;
+}
+
+.feedback-modal--show-overflow {
+  display: flex;
+  align-items: flex-start;
 }
 
 .feedback-modal__form-wrapper {
@@ -20,6 +26,7 @@
   width: 490px;
   padding: 30px 40px 28px;
   background-color: $blue;
+  overflow: visible;
 }
 
 .feedback-modal__form-wrapper h2 {
